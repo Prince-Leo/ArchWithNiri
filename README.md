@@ -1,0 +1,2 @@
+# ArchWithNiri
+config for niri
