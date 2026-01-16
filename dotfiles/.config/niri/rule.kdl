@@ -54,6 +54,7 @@ window-rule {
     match title="重命名"
     match app-id="btrfs-assistant"
     match app-id="markpix"
+    match app-id="localsend"
     match title="Steam 设置" 
     open-floating true
 }
