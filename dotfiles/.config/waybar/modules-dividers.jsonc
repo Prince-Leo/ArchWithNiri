@@ -1,88 +1,96 @@
 {
 	/*-------------------
-		left dividers
+		left dividers\uE0B6\uE0B7\uE0B4\uE0B5
 	-------------------*/
 	"custom/left_div#1": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#11": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#2": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#3": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#4": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#5": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#6": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#7": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#8": {
-		"format": "",
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_div#9": {
-		"format": "",
+		"format": "\uE0B6",
+		"tooltip": false
+	},
+	"custom/left_div#10": {
+		"format": "\uE0B6",
 		"tooltip": false
 	},
 	"custom/left_inv#1": {
-		"format": "",
+		"format": "\uE0B5",
 		"tooltip": false
 	},
 	"custom/left_inv#2": {
-		"format": "",
+		"format": "\uE0B5",
 		"tooltip": false
 	},
 	/*--------------------
 		right dividers
 	--------------------*/
 	"custom/right_div#1": {
-		"format": "",
+		"format": "\uE0B4",
 		"tooltip": false
 	},
 	"custom/right_div#11": {
-		"format": "",
+		"format": "\uE0B4",
 		"tooltip": false
 	},
 	"custom/right_div#2": {
-		"format": "",
+		"format": "\uE0B4",
 		"tooltip": false
 	},
 	"custom/right_div#3": {
-		"format": "",
+		"format": "\uE0B4",
 		"tooltip": false
 	},
 	"custom/right_div#4": {
-		"format": "",
+		"format": "\uE0B4",
 		"tooltip": false
 	},
 	"custom/right_div#5": {
-		"format": "",
+		"format": "\uE0B4",
 		"tooltip": false
 	},
 	"custom/right_div#6": {
-		"format": "",
+		"format": "\uE0B4",
+		"tooltip": false
+	},
+	"custom/right_div#10": {
+		"format": "\uE0B4",
 		"tooltip": false
 	},
 	"custom/right_inv#1": {
-		"format": "",
+		"format": "\uE0B7",
 		"tooltip": false
 	}
 }

@@ -42,7 +42,7 @@
     "spacing": 7,
     // 自定义图标
     //"icons": {
-    //     "blueman": "/home/shorin/.config/waybar/logo/bluetooth.png",
+    //     "org.fcitx.Fcitx5": "/home/Leo/Pictures/fcitx/fcitx-pinyin.svg",
     //},
   },
   //工作区和窗口名字
@@ -176,7 +176,8 @@
   //logo+程序启动器
   "custom/applauncher": {
     "tooltip-format": "Click to Open Applauncher or Right-Click to Select Wallpaper or Middle-Click to toggle blur bg",
-    "format": "󰣇",
+    //"format": "󰣇",
+    "format": " ",
     "on-click": "fuzzel",
     "on-click-right": "waypaper",
     "on-click-middle":"~/.config/scripts/niri_auto_blur_bg.sh || pkill -f niri_auto_blur_bg.sh"
@@ -202,7 +203,7 @@
   "custom/lockscreen": {
     "tooltip": false,
     "format": "",
-    "on-click": "swaylock || hyprlock",
+    "on-click": "swaylock",
   },
   "custom/reboot": {
     "tooltip": false,
@@ -243,7 +244,7 @@
   "custom/ddcutil-day": {
     "tooltip-format": "Ex.Monitor 100% brightness",
     "format": "󰃠",
-    "on-click": "ddcutil --display 1 setvcp 10 100 ",
+    "on-click": "ddcutil --dispaly 1 setvcp 10 100 ",
     "on-scroll-up":"true",
     "on-scroll-down":"true"
 
@@ -251,14 +252,14 @@
   "custom/ddcutil-night": {
     "tooltip-format": "Ex.Monitor 65% brightness",
     "format": "󰃟",
-    "on-click": "ddcutil --display 1 setvcp 10 65 ",
+    "on-click": "ddcutil --dispaly 1 setvcp 10 65 ",
     "on-scroll-up":"true",
     "on-scroll-down":"true"
   },
   "custom/ddcutil-sleep": {
     "tooltip-format": "Ex.Monitor 5% brightness",
     "format": "󰃞",
-    "on-click": "ddcutil --display 1 setvcp 10 5 ",
+    "on-click": "ddcutil --dispaly 1 setvcp 10 5 ",
     "on-scroll-up":"true",
     "on-scroll-down":"true"
   },

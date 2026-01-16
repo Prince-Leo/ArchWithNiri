@@ -115,6 +115,16 @@ window#waybar.empty #window {
 
 /* 中间 */
 
+#custom-left_div.10 {
+    color: @surface;
+    padding: 0px;
+    font-size: 1.39em; /* 25px */
+}
+#custom-right_div.10 {
+    color: @surface;
+    padding: 0px;
+    font-size: 1.39em; /* 25px */
+}
 #custom-left_div.3 {
     color: @surface_container_high;
     padding: 0px;
@@ -208,14 +218,17 @@ window#waybar.empty #window {
 /* 菜单 */
 #custom-left_div.11 {
     background-color: @tertiary;
-    color: @surface_container
+    color: @surface_container;
 }
 #custom-applauncher {
     font-size: 1.39em; /* 25px */
     padding: 0px 0.39em; /* 7px */
     margin: 0px;
     background-color: @primary;
-    color: @on_primary;
+    background-image: url("/home/Leo/Pictures/hachiwa/hachiwa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
 #custom-right_div.1,
