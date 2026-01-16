@@ -186,7 +186,8 @@
   //logo+程序启动器
   "custom/applauncher": {
     "tooltip-format": "Click to Open Applauncher or Right-Click to Select Wallpaper or Middle-Click to toggle blur bg",
-    "format": "󰣇",
+    //"format": "󰣇",
+    "format": " ",
     "on-click": "fuzzel",
     "on-click-right": "waypaper",
     "on-click-middle":"~/.config/scripts/niri_auto_blur_bg.sh || pkill -f niri_auto_blur_bg.sh"

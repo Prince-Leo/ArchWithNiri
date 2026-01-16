@@ -127,7 +127,10 @@ window#waybar.empty #window {
     padding: 0px 11px;
     margin: 5px;
     background-color: @primary;
-    color: @on_primary;
+    background-image: url("/home/Leo/Pictures/hachiwa/hachiwa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #custom-separator.2 {
