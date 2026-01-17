@@ -35,6 +35,7 @@ xfsprogs                                 # Tools for XFS filesystems
 
 # --- Others ---
 code                                     # vscode
+gnome-control-center                     # gnome settings
 gnome-font-viewer                        # manage fonts easily
 gnome-calendar                           # calendar
 gnome-clocks                             # clocks
