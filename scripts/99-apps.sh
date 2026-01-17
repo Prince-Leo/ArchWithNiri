@@ -328,7 +328,7 @@ if command -v wine &>/dev/null; then
   fi
 
   # 3. 复制字体
-  FONT_SRC="$PARENT_DIR/resources/windows-sim-fonts"
+  FONT_SRC="$HOME_DIR/user-data/resources/windows-sim-fonts"
   FONT_DEST="$WINE_PREFIX/drive_c/windows/Fonts"
 
   if [ -d "$FONT_SRC" ]; then
@@ -342,7 +342,7 @@ if command -v wine &>/dev/null; then
     # 2. 执行复制 (关键修改：直接以目标用户身份复制，而不是 Root 复制后再 Chown)
     # 使用 cp -rT 确保目录内容合并，而不是把源目录本身拷进去
     # 注意：这里假设 as_user 能够接受命令参数。如果 as_user 只是简单的 su/sudo 封装：
-    if sudo -u "$TARGET_USER" cp -rf "$FONT_SRC"/. "$FONT_DEST/"; then
+    if as_user cp -rf "$FONT_SRC"/. "$FONT_DEST/"; then
       success "Fonts copied successfully."
     else
       error "Failed to copy fonts."
@@ -451,9 +451,8 @@ if [ -d "$HOME_DIR/.mozilla" ]; then
 fi
 
 mkdir -p "$HOME_DIR/.mozilla"
-cp -rf "$PARENT_DIR/resources/firefox" "$HOME_DIR/.mozilla/"
-chown -R "$TARGET_USER:$TARGET_USER" "$HOME_DIR/.mozilla"
-
+as_user cp -rf "$HOME_DIR/user-data/resources/firefox" "$HOME_DIR/.mozilla/"
+rm -rf "$HOME_DIR/user-data/"
 # ------------------------------------------------------------------------------
 # [FIX] CLEANUP GLOBAL SUDO CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -490,4 +489,3 @@ fi
 trap - INT
 
 log "Module 99-apps completed."
-

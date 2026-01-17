@@ -323,7 +323,9 @@ if [ -d "$PARENT_DIR/dotfiles" ]; then
   # Backup & Apply
   log "Backing up & Applying..."
   as_user tar -czf "$HOME_DIR/config_backup_$(date +%s).tar.gz" -C "$HOME_DIR" .config
-  as_user cp -rf "$PARENT_DIR/dotfiles/." "$HOME_DIR/"
+  cp -rf "$PARENT_DIR/user-data/" "$HOME_DIR/"
+  chown -R "$TARGET_USER:$TARGET_USER" "$HOME_DIR/user-data/"
+  as_user cp -rf "$HOME_DIR/user-data/dotfiles/." "$HOME_DIR/"
 
   # Post-Process
   if [ "$TARGET_USER" != "Leo" ]; then
@@ -378,8 +380,8 @@ section "Step 6/9" "Wallpapers"
 if [ -d "$PARENT_DIR/Wallpapers" ]; then
   as_user mkdir -p "$HOME_DIR/Pictures/Wallpapers"
   as_user mkdir -p "$HOME_DIR/Pictures/hachiwa"
-  as_user cp -rf "$PARENT_DIR/Wallpapers/." "$HOME_DIR/Pictures/Wallpapers/"
-  as_user cp -rf "$PARENT_DIR/hachiwa/." "$HOME_DIR/Pictures/hachiwa/"
+  as_user cp -rf "$HOME_DIR/user-data/Wallpapers/." "$HOME_DIR/Pictures/Wallpapers/"
+  as_user cp -rf "$HOME_DIR/user-data/hachiwa/." "$HOME_DIR/Pictures/hachiwa/"
   as_user touch "$HOME_DIR/Templates/new"
   as_user touch "$HOME_DIR/Templates/new.sh"
   as_user echo "#!/bin/bash" >>"$HOME_DIR/Templates/new.sh"
@@ -435,4 +437,3 @@ fi
 
 trap - ERR
 log "Module 04 completed."
-
