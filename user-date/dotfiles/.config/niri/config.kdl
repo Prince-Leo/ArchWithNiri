@@ -20,7 +20,9 @@ screenshot-path "~/Pictures/Screenshots/Niri-screenshots/%Y-%m-%d %H-%M-%S.png"
 environment {
     //LC_CTYPE "zh_CN.UTF-8" 会导致输入法出现漏字
     // 设置界面语言
-    LC_MESSAGES "zh_CN.UTF-8"
+    //LC_MESSAGES "zh_CN.UTF-8"
+    LANG "zh_CN.UTF-8"
+    LC_CTYPE "en_US.UTF-8"
     // 输入法环境变量
     XMODIFIERS "@im=fcitx"
     // qt主题
@@ -308,14 +310,14 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // 自动启动设置
-// 询问管理员权限功能（身份验证）
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 // 桌面壁纸的守护进程
 spawn-at-startup "swww-daemon"
 // 总览界面背景壁纸的守护进程
 spawn-sh-at-startup "swww-daemon -n overview"
 // 启动niri时ss随机更换一张壁纸
 spawn-at-startup "waypaper" "--random"
+// 询问管理员权限功能（身份验证）
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 // 有聚焦窗口时桌面自动模糊的脚本
 spawn-at-startup "~/.config/scripts/niri_auto_blur_bg.sh"
 // 屏幕分享、录屏相关的环境设置

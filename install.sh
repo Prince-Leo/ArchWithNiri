@@ -193,13 +193,6 @@ CURRENT_STEP=0
 log "Initializing installer sequence..."
 sleep 0.5
 
-# ---- update keyring-----
-
-section "Pre-Flight" "Update Keyring"
-
-exe pacman -Sy
-exe pacman -S --noconfirm archlinux-keyring
-
 # --- Reflector Mirror Update (State Aware) ---
 section "Pre-Flight" "Mirrorlist Optimization"
 
@@ -261,8 +254,15 @@ else
   echo "REFLECTOR_DONE" >>"$STATE_FILE"
 fi
 
+# ---- update keyring-----
+
+section "Pre-Flight" "Update Keyring"
+
+exe pacman -Sy
+exe pacman -S --noconfirm archlinux-keyring
+
 # --- Global Update ---
-section "Pre-Flight" "System Synchronization"
+section "Pre-Flight" "System update"
 log "Ensuring system is up-to-date..."
 
 if exe pacman -Syu --noconfirm; then
@@ -469,4 +469,3 @@ done
 
 echo -e "\n\n   ${H_GREEN}>>> Rebooting...${NC}"
 systemctl reboot
-
